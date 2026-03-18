@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="appleid-signin-client-id" content="[CLIENT_ID]">
+        <meta name="appleid-signin-scope" content="[SCOPES]">
+        <meta name="appleid-signin-redirect-uri" content="[REDIRECT_URI]">
+        <meta name="appleid-signin-state" content="[STATE]">
+        <style>
+        .signin-button {
+            width: 210px;
+            height: 40px;
+        }
+        </style>
+        <title>Login</title>
+    </head>
+    <body>
+        <h1>Login</h1>
+        <form>
+            <label for="username">Username ou E-mail:</label>
+            <br>
+            <input type="text" id="username" name="username" required autocomplete="email" placeholder="Username ou E-mail">
+            <br>
+            <label for="password">Password:</label>
+            <br>
+            <input type="password" id="password" name="password" required placeholder="Senha">
+            <br>
+            <button type="submit">Entrar</button>
+        </form>
+        <a href="cadastro.html" target="_blank">Não tem uma conta? Cadastre-se</a>
+        <br>
+        <a href="esqueci-senha.html" target="_blank">Esqueci minha senha</a>
+        <br>
+        <span>or</span>
+        <br>
+        <!-- Google Sign In Button -->
+        <script src="https://accounts.google.com/gsi/client" async></script>
+        <div id="g_id_onload"
+            data-client_id="YOUR_GOOGLE_CLIENT_ID"
+            data-login_uri="https://your.domain/your_login_endpoint"
+            data-auto_prompt="false">
+        </div>
+        <div class="g_id_signin"
+            data-type="standard"
+            data-size="large"
+            data-theme="outline"
+            data-text="sign_in_with"
+            data-shape="rectangular"
+            data-logo_alignment="left">
+        </div>
+        <br>
+        <!-- Facebook Login Button -->
+        <div id="spinner" style="background: #4267b2; border-radius: 5px; color: white; height: 40px; align-content: center; text-align: center; width: 250px;">Fazer login com Facebook</div>
+        <div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="continue_with" data-width="100%" data-scope="public_profile, email" data-use-continue-as="true" data-auto-logout-link="true"></div>
+        <br>
+        <!-- Apple Sign In Button -->
+        <div id="appleid-signin" class="signin-button" data-color="black" data-border="true" data-type="sign-in" data-width="250px" data-height="100%"></div>
+        <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+    </body>
+
+</html>
