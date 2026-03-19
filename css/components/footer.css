@@ -81,6 +81,16 @@
 	height: 20px;
 }
 
+.footer__newsletter-btn {
+	background-color: orangered;
+	color: white;
+	border: none;
+	padding: 0.15rem 1.0rem;
+	font-size: 0.875rem;
+	cursor: pointer;
+	
+}
+
 .footer__bottom {
 	padding-top: 1.5rem;
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
